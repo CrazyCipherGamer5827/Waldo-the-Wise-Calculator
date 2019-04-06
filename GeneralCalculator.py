@@ -71,6 +71,26 @@ class TrigFunctions():
 		value = 1 / (math.tan(angle))
 		return value
 
+	def asin(angle):
+		value = math.asin(angle)
+		return value
+
+	def acos(angle):
+		value = math.acos(angle)
+		return value
+
+	def atan(angle):
+		value = math.atan(angle)
+		return value
+
+	def toDegrees(angle):
+		value = math.degrees(angle)
+		return value
+
+	def toRadians(angle):
+		value = math.radians(angle)
+		return value
+
 class Main():
 	question = str(input("Welcome to the general calculator! This calculator performs basic arithmatic operations as well as trigonometric functions! " +
 	"Please enter what part of the calculator you wish to use."))
@@ -155,3 +175,33 @@ class Main():
 			TrigFunctions = TrigFunctions.cot(angle)
 
 			print("cot of " + str(angle) + ": " + str(TrigFunctions))
+
+		if operation == "asin":
+			angle = float(input("Please the angle (in radians)."))
+			TrigFunctions = TrigFunctions.asin(angle)
+
+			print("asin of " + str(angle) + ": " + str(TrigFunctions))
+
+		if operation == "acos":
+			angle = float(input("Please the angle (in radians)."))
+			TrigFunctions = TrigFunctions.acos(angle)
+
+			print("acos of " + str(angle) + ": " + str(TrigFunctions))
+
+		if operation == "atan":
+			angle = float(input("Please the angle (in radians)."))
+			TrigFunctions = TrigFunctions.atan(angle)
+
+			print("atan of " + str(angle) + ": " + str(TrigFunctions))
+
+		if operation == "to degrees":
+			angle = float(input("Please the angle."))
+			TrigFunctions = TrigFunctions.degrees(angle)
+
+			print("degree measurement of " + str(angle) + ": " + str(TrigFunctions))
+
+		if operation == "to radians":
+			angle = float(input("Please the angle."))
+			TrigFunctions = TrigFunctions.radians(angle)
+
+			print("radian measurement of " + str(angle) + ": " + str(TrigFunctions))
