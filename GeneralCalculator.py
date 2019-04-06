@@ -121,7 +121,37 @@ class Main():
 		operation = str(input("Please enter the trigonometric function you wish to do."))
 
 		if operation == "sin":
-			angle = float(input("Please enter the angle."))
-			TrigFunctions.sin(angle)
+			angle = float(input("Please enter the angle (in radians)."))
+			TrigFunctions = TrigFunctions.sin(angle)
 
 			print("sin of " + str(angle) + ": " + str(TrigFunctions))
+
+		if operation == "cos":
+			angle = float(input("Please enter the angle (in radians)."))
+			TrigFunctions = TrigFunctions.cos(angle)
+
+			print("cos of " + str(angle) + ": " + str(TrigFunctions))
+
+		if operation == "tan":
+			angle = float(input("Please enter the angle (in radians)."))
+			TrigFunctions = TrigFunctions.tan(angle)
+
+			print("tan of " + str(angle) + ": " + str(TrigFunctions))
+
+		if operation == "csc":
+			angle = float(input("Please enter the angle (in radians)."))
+			TrigFunctions = TrigFunctions.csc(angle)
+
+			print("csc of " + str(angle) + ": " + str(TrigFunctions))
+
+		if operation == "sec":
+			angle = float(input("Please enter the angle (in radians)."))
+			TrigFunctions = TrigFunctions.sec(angle)
+
+			print("sec of " + str(angle) + ": " + str(TrigFunctions))
+
+		if operation == "cot":
+			angle = float(input("Please enter the angle (in radians)."))
+			TrigFunctions = TrigFunctions.cot(angle)
+
+			print("cot of " + str(angle) + ": " + str(TrigFunctions))
