@@ -7,24 +7,33 @@ class BasicMath():
 		self.multiply = multiply
 		self.divide = divide
 	
-	def add(number, i, Sum, iterations):
+	def add(number, i, iterations):
+		Sum = 0
+
 		while i < iterations:
 			i = i + 1
-			Sum = Sum + number
+			Sum = number + number
 		return Sum
 
-	def subtract(number, i, difference, iterations):
+	def subtract(number, i, iterations):
+		difference = 0
+
 		while i < iterations:
 			i = i + 1
 			difference = difference - number
 		return differnce
 
-	def multiply(number, i, product, iterations):
+	def multiply(number, i, iterations):
+		product = 0
+
 		while i < iterations:
 			i = i + 1
 			product = product * number
 		return product
-	def divide(number, i, quotient, iterations):
+
+	def divide(number, i, iterations):
+		quotient = 0
+
 		while i < iterations:
 			i = i + 1
 			quotient = quotient / number
@@ -73,4 +82,10 @@ class Main():
 
 		if operation == "add":
 			iterations = float(input("Please enter the number of iterations you wish to do."))
-			BasicMath = BasicMath.add(5, 6, 7, 8)
+			i = 0
+			while i < iterations:
+				i = i + 1
+				number = float(input("Please enter the numbers."))
+			
+			BasicMath = BasicMath.add(number, 0, iterations)
+			print(BasicMath)
