@@ -136,7 +136,7 @@ class Main():
 			BasicMath = BasicMath.divide(number, 0, iterations)
 			print("quotient: " + str(BasicMath))
 
-	if question == "trigonometric":
+	if question == "trig":
 		global TrigFunctions
 		operation = str(input("Please enter the trigonometric function you wish to do."))
 
