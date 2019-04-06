@@ -196,12 +196,12 @@ class Main():
 
 		if operation == "to degrees":
 			angle = float(input("Please enter the angle."))
-			TrigFunctions = TrigFunctions.degrees(angle)
+			TrigFunctions = TrigFunctions.toDegrees(angle)
 
 			print("degree measurement of " + str(angle) + ": " + str(TrigFunctions))
 
 		if operation == "to radians":
 			angle = float(input("Please enter the angle."))
-			TrigFunctions = TrigFunctions.radians(angle)
+			TrigFunctions = TrigFunctions.toRadians(angle)
 
 			print("radian measurement of " + str(angle) + ": " + str(TrigFunctions))
