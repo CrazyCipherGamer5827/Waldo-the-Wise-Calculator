@@ -177,31 +177,31 @@ class Main():
 			print("cot of " + str(angle) + ": " + str(TrigFunctions))
 
 		if operation == "asin":
-			angle = float(input("Please the angle (in radians)."))
-			TrigFunctions = TrigFunctions.asin(angle)
+			value = float(input("Please enter the value between -1 and 1."))
+			TrigFunctions = TrigFunctions.asin(value)
 
-			print("asin of " + str(angle) + ": " + str(TrigFunctions))
+			print("asin of " + str(value) + ": " + str(TrigFunctions))
 
 		if operation == "acos":
-			angle = float(input("Please the angle (in radians)."))
-			TrigFunctions = TrigFunctions.acos(angle)
+			value = float(input("Please enter the value between -1 and 1."))
+			TrigFunctions = TrigFunctions.acos(value)
 
-			print("acos of " + str(angle) + ": " + str(TrigFunctions))
+			print("acos of " + str(value) + ": " + str(TrigFunctions))
 
 		if operation == "atan":
-			angle = float(input("Please the angle (in radians)."))
-			TrigFunctions = TrigFunctions.atan(angle)
+			value = float(input("Please enter the value between -1 and 1."))
+			TrigFunctions = TrigFunctions.atan(value)
 
-			print("atan of " + str(angle) + ": " + str(TrigFunctions))
+			print("atan of " + str(value) + ": " + str(TrigFunctions))
 
 		if operation == "to degrees":
-			angle = float(input("Please the angle."))
+			angle = float(input("Please enter the angle."))
 			TrigFunctions = TrigFunctions.degrees(angle)
 
 			print("degree measurement of " + str(angle) + ": " + str(TrigFunctions))
 
 		if operation == "to radians":
-			angle = float(input("Please the angle."))
+			angle = float(input("Please enter the angle."))
 			TrigFunctions = TrigFunctions.radians(angle)
 
 			print("radian measurement of " + str(angle) + ": " + str(TrigFunctions))
