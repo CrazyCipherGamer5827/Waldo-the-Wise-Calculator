@@ -12,7 +12,7 @@ class BasicMath():
 
 		while i < iterations:
 			i = i + 1
-			Sum = number + number
+			Sum = Sum + number
 		return Sum
 
 	def subtract(number, i, iterations):
@@ -21,10 +21,10 @@ class BasicMath():
 		while i < iterations:
 			i = i + 1
 			difference = difference - number
-		return differnce
+		return difference
 
 	def multiply(number, i, iterations):
-		product = 0
+		product = 1
 
 		while i < iterations:
 			i = i + 1
@@ -32,8 +32,7 @@ class BasicMath():
 		return product
 
 	def divide(number, i, iterations):
-		quotient = 0
-
+		quotient = 1
 		while i < iterations:
 			i = i + 1
 			quotient = quotient / number
@@ -48,27 +47,27 @@ class TrigFunctions():
 		self.sec = sec
 		self.cot = cot
 
-	def sin(angle, value):
+	def sin(angle):
 		value = math.sin(angle)
 		return value
 
-	def cos(angle, value):
+	def cos(angle):
 		value = math.cos(angle)
 		return value
 
-	def tan(angle, value):
+	def tan(angle):
 		value = math.tan(angle)
 		return value
 
-	def csc(angle, value):
+	def csc(angle):
 		value = 1 / (math.sin(angle))
 		return value
 
-	def sec(angle, value):
+	def sec(angle):
 		value = 1 / (math.cos(angle))
 		return value
 
-	def cot(angle, value):
+	def cot(angle):
 		value = 1 / (math.tan(angle))
 		return value
 
@@ -88,4 +87,41 @@ class Main():
 				number = float(input("Please enter the numbers."))
 			
 			BasicMath = BasicMath.add(number, 0, iterations)
-			print(BasicMath)
+			print("sum: " + str(BasicMath))
+
+		if operation == "subtract":
+			iterations = float(input("Please enter the number of iterations you wish to do."))
+			i = 0
+			while i < iterations:
+				i = i + 1
+				number = float(input("Please enter the numbers."))
+			BasicMath = BasicMath.subtract(number, 0, iterations)
+			print("difference: " + str(BasicMath))
+
+		if operation == "multiply":
+			iterations = float(input("Please enter the number of iterations you wish to do."))
+			i = 0
+			while i < iterations:
+				i = i + 1
+				number = float(input("Please enter the numbers."))
+			BasicMath = BasicMath.multiply(number, 0, iterations)
+			print("product: " + str(BasicMath))
+
+		if operation == "divide":
+			iterations = float(input("Please enter the number of iterations you wish to do."))
+			i = 0
+			while i < iterations:
+				i = i + 1
+				number = float(input("Please enter the numbers."))
+			BasicMath = BasicMath.divide(number, 0, iterations)
+			print("quotient: " + str(BasicMath))
+
+	if question == "trigonometric":
+		global TrigFunctions
+		operation = str(input("Please enter the trigonometric function you wish to do."))
+
+		if operation == "sin":
+			angle = float(input("Please enter the angle."))
+			TrigFunctions.sin(angle)
+
+			print("sin of " + str(angle) + ": " + str(TrigFunctions))
