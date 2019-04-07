@@ -1,4 +1,5 @@
 import math
+import tkinter
 
 class BasicMath():
 	def __init__(self, add, subtract, multiply, divide):
@@ -7,35 +8,32 @@ class BasicMath():
 		self.multiply = multiply
 		self.divide = divide
 	
-	def add(number, i, iterations):
+	def add(numbers, i, iterations):
 		Sum = 0
 
-		while i < iterations:
-			i = i + 1
-			Sum = Sum + number
+		for i in numbers:
+			Sum += i
 		return Sum
 
-	def subtract(number, i, iterations):
+	def subtract(numbers, i, iterations):
 		difference = 0
 
-		while i < iterations:
-			i = i + 1
-			difference = difference - number
+		for i in numbers:
+			difference = difference - i
 		return difference
 
-	def multiply(number, i, iterations):
+	def multiply(numbers, i, iterations):
 		product = 1
 
-		while i < iterations:
-			i = i + 1
-			product = product * number
+		for i in numbers:
+			product = product * i
 		return product
 
-	def divide(number, i, iterations):
+	def divide(numbers, i, iterations):
 		quotient = 1
-		while i < iterations:
-			i = i + 1
-			quotient = quotient / number
+		
+		for i in numbers:
+			quotient = quotient / i
 		return quotient
 
 class TrigFunctions():
@@ -102,39 +100,54 @@ class Main():
 		if operation == "add":
 			iterations = float(input("Please enter the number of iterations you wish to do."))
 			i = 0
+			numbers = []
+
 			while i < iterations:
 				i = i + 1
 				number = float(input("Please enter the numbers."))
+				numbers.append(number)
 			
-			BasicMath = BasicMath.add(number, 0, iterations)
-			print("sum: " + str(BasicMath))
+			Sum = BasicMath.add(numbers, 0, iterations)
+			print("sum: " + str(Sum))
 
 		if operation == "subtract":
 			iterations = float(input("Please enter the number of iterations you wish to do."))
 			i = 0
+			numbers = []
+
 			while i < iterations:
 				i = i + 1
 				number = float(input("Please enter the numbers."))
-			BasicMath = BasicMath.subtract(number, 0, iterations)
-			print("difference: " + str(BasicMath))
+				numbers.append(number)
+			
+			difference = BasicMath.subtract(numbers, 0, iterations)
+			print("difference: " + str(difference))
 
 		if operation == "multiply":
 			iterations = float(input("Please enter the number of iterations you wish to do."))
 			i = 0
+			numbers=  []
+
 			while i < iterations:
 				i = i + 1
 				number = float(input("Please enter the numbers."))
-			BasicMath = BasicMath.multiply(number, 0, iterations)
-			print("product: " + str(BasicMath))
+				numbers.append(number)
+			
+			product = BasicMath.multiply(numbers, 0, iterations)
+			print("product: " + str(product))
 
 		if operation == "divide":
 			iterations = float(input("Please enter the number of iterations you wish to do."))
 			i = 0
+			numbers = []
+
 			while i < iterations:
 				i = i + 1
 				number = float(input("Please enter the numbers."))
-			BasicMath = BasicMath.divide(number, 0, iterations)
-			print("quotient: " + str(BasicMath))
+				numbers.append(number)
+			
+			quotient = BasicMath.divide(numbers, 0, iterations)
+			print("quotient: " + str(quotient))
 
 	if question == "trig":
 		global TrigFunctions
