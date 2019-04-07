@@ -1,5 +1,156 @@
 import math
-import tkinter
+from tkinter import *
+
+# class Graphics():
+# 	def __init__(self, button):
+# 		self.button = button
+
+# 	initializer = Tk()
+
+# 	def interact1():
+# 		print(1)
+
+# 	def interact2():
+# 		print(2)
+
+# 	def interact3():
+# 		print(3)
+
+# 	def interact4():
+# 		print(4)
+	
+# 	def interact5():
+# 		print(5)
+
+# 	def interact6():
+# 		print(6)
+
+# 	def interact7():
+# 		print(7)
+
+# 	def interact8():
+# 		print(8)
+
+# 	def interact9():
+# 		print(9)
+
+# 	def interact10():
+# 		print(0)
+
+# 	def interact11():
+# 		print("+")
+
+# 	def interact12():
+# 		print("-")
+
+# 	def interact13():
+# 		print("*")
+
+# 	def interact14():
+# 		print("/")
+
+# 	def interact15():
+# 		print("=")
+
+# 	def interact16():
+# 		print("clear")
+	
+# 	def interact17():
+# 		print("sin")
+
+# 	def interact18():
+# 		print("cos")
+
+# 	def interact19():
+# 		print("tan")
+
+# 	def interact20():
+# 		print("csc")
+
+# 	def interact21():
+# 		print("sec")
+
+# 	def interact22():
+# 		print("cot")
+
+# 	def interact23():
+# 		print("asin")
+
+# 	def interact24():
+# 		print("acos")
+
+# 	def interact25():
+# 		print("atan")
+
+# 	def interact26():
+# 		print("toDegrees")
+
+# 	def interact27():
+# 		print("toRadians")
+
+# 	def interact28():
+# 		print("-1")
+
+# 	button1 = Button(initializer, text = "1", command = interact1)
+# 	button2 = Button(initializer, text = "2", command = interact2)
+# 	button3 = Button(initializer, text = "3", command = interact3)
+# 	button4 = Button(initializer, text = "4", command = interact4)
+# 	button5 = Button(initializer, text = "5", command = interact5)
+# 	button6 = Button(initializer, text = "6", command = interact6)
+# 	button7 = Button(initializer, text = "7", command = interact7)
+# 	button8 = Button(initializer, text = "8", command = interact8)
+# 	button9 = Button(initializer, text = "9", command = interact9)
+# 	button10 = Button(initializer, text = "0", command = interact10)
+# 	button11 = Button(initializer, text = "-", command = interact28)
+# 	button12 = Button(initializer, text = "sin", command = interact17)
+# 	button13 = Button(initializer, text = "cos", command = interact18)
+# 	button14 = Button(initializer, text = "tan", command = interact19)
+# 	button15 = Button(initializer, text = "csc", command = interact20)
+# 	button16 = Button(initializer, text = "sec", command = interact21)
+# 	button17 = Button(initializer, text = "cot", command = interact22)
+# 	button18 = Button(initializer, text = "asin", command = interact23)
+# 	button19 = Button(initializer, text = "acos", command = interact24)
+# 	button20 = Button(initializer, text = "atan", command = interact25)
+# 	button21 = Button(initializer, text = "toDegrees", command = interact26)
+# 	button22 = Button(initializer, text = "toRadians", command = interact27)
+# 	button23 = Button(initializer, text = "=", command = interact15)
+# 	button24 = Button(initializer, text = "clear", command = interact16)
+# 	button25 = Button(initializer, text = "+", command = interact11)
+# 	button26 = Button(initializer, text = "-", command = interact12)
+# 	button27 = Button(initializer, text = "*", command = interact13)
+# 	button28 = Button(initializer, text = "/", command = interact14)
+
+
+# 	button1.pack()
+# 	button2.pack()
+# 	button3.pack()
+# 	button4.pack()
+# 	button5.pack()
+# 	button6.pack()
+# 	button7.pack()
+# 	button8.pack()
+# 	button9.pack()
+# 	button10.pack()
+# 	button11.pack()
+# 	button12.pack()
+# 	button13.pack()
+# 	button14.pack()
+# 	button15.pack()
+# 	button16.pack()
+# 	button17.pack()
+# 	button18.pack()
+# 	button19.pack()
+# 	button20.pack()
+# 	button21.pack()
+# 	button22.pack()
+# 	button23.pack()
+# 	button24.pack()
+# 	button25.pack()
+# 	button26.pack()
+# 	button27.pack()
+# 	button28.pack()
+
+# 	mainloop()
 
 class BasicMath():
 	def __init__(self, add, subtract, multiply, divide):
@@ -93,6 +244,10 @@ class Main():
 	question = str(input("Welcome to the general calculator! This calculator performs basic arithmatic operations as well as trigonometric functions! " +
 	"Please enter what part of the calculator you wish to use."))
 
+	#global Graphics
+
+	#Graphics = Graphics.interact()
+
 	if question == "basic":
 		global BasicMath
 		operation = str(input("What operation would you like to perform?"))
@@ -126,7 +281,7 @@ class Main():
 		if operation == "multiply":
 			iterations = float(input("Please enter the number of iterations you wish to do."))
 			i = 0
-			numbers=  []
+			numbers = []
 
 			while i < iterations:
 				i = i + 1
@@ -218,3 +373,6 @@ class Main():
 			TrigFunctions = TrigFunctions.toRadians(angle)
 
 			print("radian measurement of " + str(angle) + ": " + str(TrigFunctions))
+
+#Sources: https://pythonspot.com/tk-window-and-button/, https://www.python-course.eu/tkinter_buttons.php,, https://wiki.python.org/moin/TkInter,
+#http://effbot.org/tkinterbook/button.htm, https://developers.google.com/edu/python/lists, w3schools.com, various other websites on the internet
